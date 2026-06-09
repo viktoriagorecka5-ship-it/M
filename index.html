@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>dla ciebie</title>
+<title>Miło mi cię widzieć od czego zaczniemy?</title>
 
 <style>
 body {
@@ -32,8 +32,26 @@ button {
 
 <h1>to jest dla ciebie</h1>
 
-<button onclick="alert('o mnie')">o mnie</button>
-<button onclick="alert('o tobie')">o tobie</button>
+<button onclick="showSection('oMnie')">o mnie</button>
+<button onclick="showSection('oTobie')">o tobie</button>
+    <div id="oMnie" style="display:none;">
+    <h2>O mnie</h2>
+    <p>Tutaj będą informacje o mnie.</p>
+</div>
 
+<div id="oTobie" style="display:none;">
+    <h2>O tobie</h2>
+    <p>Tutaj będzie napisane, dlaczego jesteś ważny.</p>
+</div>
+
+<script>
+function showSection(sectionId) {
+
+    document.getElementById("oMnie").style.display = "none";
+    document.getElementById("oTobie").style.display = "none";
+
+    document.getElementById(sectionId).style.display = "block";
+}
+</script>
 </body>
 </html>
